@@ -23,14 +23,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-@dependencies jquery, alertify (optional)
+@dependencies jquery
 NOTE: All times are in seconds.
 */
 
 var SessionPing = (function() {
   /* default options */
   var _options = {
-    interval: 30,
+    interval: 60,
     url: "/",
     triggers: ["mousemove", "touchstart", "scroll", "keydown"],
     onSessionExpired: null,
@@ -128,14 +128,6 @@ var SessionPing = (function() {
       _options.onSessionExpired();
     }
   }
-
-  function _alert(msg) {
-    if (_isFunction(alertify.log)) {
-      alertify.log(msg);
-    } else {
-      alert(msg);
-    }
-	}
 	
 	function _now() {
 		return new Date().getTime() / 1000;
