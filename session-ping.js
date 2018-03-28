@@ -39,8 +39,8 @@ var SessionPing = (function() {
     onPingOk: null
   };
 
-	var _xhr = null;
-	var _lastPingTime = 0;
+  var _xhr = null;
+  var _lastPingTime = 0;
 
   function _setOptions(options) {
     if (_empty(options)) {
@@ -129,9 +129,9 @@ var SessionPing = (function() {
     }
   }
 	
-	function _now() {
-		return new Date().getTime() / 1000;
-	}
+  function _now() {
+	return new Date().getTime() / 1000;
+  }
 
   function _empty(obj) {
     return $.isEmptyObject(obj);
