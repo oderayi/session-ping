@@ -130,7 +130,7 @@ var SessionPing = (function() {
   }
 	
   function _now() {
-	return new Date().getTime() / 1000;
+	return Date.now() / 1000;
   }
 
   function _empty(obj) {
