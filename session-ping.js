@@ -76,8 +76,8 @@ var SessionPing = (function() {
     return _options;
   }
 
-	function _ping() {
-		_lastPingTime = _now();
+  function _ping() {
+    _lastPingTime = _now();
     /* clear / stop previous request if exists */
     if (_xhr) {
       _xhr.abort();
